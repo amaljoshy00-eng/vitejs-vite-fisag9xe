@@ -1,0 +1,290 @@
+/* CONTACT LINKS MANAGER */
+
+.social-manager {
+  background: #0e192b;
+  border: 1px solid #263650;
+  border-radius: 15px;
+  padding: 28px;
+  margin: 30px 0;
+  color: #fff;
+}
+
+.social-manager-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.social-manager-heading p {
+  color: #ff702e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.social-manager-heading h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.social-manager-heading span {
+  color: #9ba9bd;
+  font-size: 14px;
+}
+
+.social-add-button {
+  background: #ff702e;
+  color: #fff;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.social-add-button:hover {
+  background: #ff8a50;
+}
+
+/* FORM */
+
+.social-link-form {
+  background: #091323;
+  border: 1px solid #30415b;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  max-width: 750px;
+}
+
+.social-link-form h3 {
+  margin-bottom: 22px;
+  font-size: 19px;
+}
+
+.social-link-form label {
+  display: block;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.social-link-form input:not([type='checkbox']) {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0e192b;
+  border: 1px solid #30415b;
+  color: #fff;
+  padding: 13px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.social-link-form input:focus {
+  border-color: #ff702e;
+}
+
+.social-visibility-checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0 22px;
+  cursor: pointer;
+}
+
+.social-visibility-checkbox input {
+  width: 17px;
+  height: 17px;
+  accent-color: #ff702e;
+}
+
+/* FORM BUTTONS */
+
+.social-form-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-form-actions button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.social-form-actions button:first-child {
+  background: #ff702e;
+  color: #fff;
+}
+
+.social-form-actions button:last-child {
+  background: #263650;
+  color: #fff;
+}
+
+.social-form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* CONTACT LINK LIST */
+
+.social-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-link-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #091323;
+  border: 1px solid #263650;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.social-link-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.social-link-info strong {
+  font-size: 15px;
+  color: #fff;
+}
+
+.social-link-info span {
+  font-size: 12px;
+  color: #9ba9bd;
+  overflow-wrap: anywhere;
+}
+
+.social-link-info small {
+  font-size: 11px;
+  color: #71839d;
+}
+
+/* VISIBILITY STATUS */
+
+.social-visible,
+.social-hidden {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.social-visible {
+  color: #75e0b3;
+}
+
+.social-hidden {
+  color: #ff9ba5;
+}
+
+/* ACTION BUTTONS */
+
+.social-link-actions {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.social-link-actions button {
+  background: #1a2940;
+  color: #dbe5f2;
+  border: 1px solid #30415b;
+  padding: 8px 11px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.social-link-actions button:hover {
+  border-color: #ff702e;
+}
+
+.social-link-actions .social-delete-button {
+  color: #ff9ba5;
+}
+
+/* EMPTY STATE */
+
+.social-empty {
+  background: #091323;
+  border: 1px dashed #30415b;
+  border-radius: 10px;
+  padding: 35px;
+  text-align: center;
+}
+
+.social-empty h3 {
+  margin-bottom: 10px;
+}
+
+.social-empty p,
+.social-loading {
+  color: #9ba9bd;
+  font-size: 14px;
+}
+
+/* MESSAGES */
+
+.social-success-message {
+  background: #123b30;
+  color: #75e0b3;
+  padding: 12px 15px;
+  border-radius: 7px;
+  margin-bottom: 18px;
+}
+
+.social-error-message {
+  background: #49242b;
+  color: #ff9ba5;
+  padding: 12px 15px;
+  border-radius: 7px;
+  margin-bottom: 18px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .social-manager {
+    padding: 18px;
+  }
+
+  .social-manager-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .social-link-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .social-link-actions {
+    width: 100%;
+  }
+
+  .social-link-actions button {
+    flex: 1;
+  }
+
+  .social-link-form {
+    padding: 18px;
+  }
+}

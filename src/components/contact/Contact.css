@@ -1,0 +1,320 @@
+.contact-section {
+  position: relative;
+  padding: 110px 7% 35px;
+  background: #0b1222;
+  color: #f5f5f5;
+  overflow: hidden;
+}
+
+.contact-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -180px;
+  top: 10%;
+  background: #713cff;
+  opacity: 0.12;
+  filter: blur(150px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ff702e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 45px;
+}
+
+.contact-eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: #ff702e;
+}
+
+.contact-main {
+  position: relative;
+  z-index: 1;
+  padding: 30px 0 100px;
+}
+
+.contact-heading h2 {
+  font-size: clamp(55px, 8vw, 112px);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -5px;
+  margin: 0;
+}
+
+.contact-heading h2 span {
+  color: #ff702e;
+}
+
+.contact-heading h3 {
+  color: #ff702e;
+  font-size: clamp(25px, 4vw, 48px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  margin: 25px 0;
+}
+
+.contact-description {
+  max-width: 540px;
+  color: #aab3c3;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+/* CONTACT BUTTONS */
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-email-button,
+.contact-telegram-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 18px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.contact-email-button {
+  background: #ff702e;
+  color: #101827;
+}
+
+.contact-email-button:hover {
+  background: #ff8b55;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(255, 112, 46, 0.2);
+}
+
+.contact-telegram-button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f5f5f5;
+}
+
+.contact-telegram-button:hover {
+  border-color: #ff702e;
+  color: #ff702e;
+  transform: translateY(-4px);
+}
+
+.contact-button-arrow {
+  font-size: 22px;
+}
+
+/* CONTACT DETAILS */
+
+.contact-email,
+.contact-telegram-link {
+  display: block;
+  width: fit-content;
+  color: #aab3c3;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 22px;
+  transition: color 0.3s ease;
+}
+
+.contact-email:hover,
+.contact-telegram-link:hover {
+  color: #ff702e;
+}
+
+/* FOOTER */
+
+.contact-bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.contact-brand span {
+  color: #ff702e;
+}
+
+.contact-brand p {
+  color: #778195;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+.back-to-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #aab3c3;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  transition: 0.3s ease;
+}
+
+.back-to-top span {
+  color: #ff702e;
+  font-size: 20px;
+}
+
+.back-to-top:hover {
+  color: #ff702e;
+}
+
+/* ENTRANCE ANIMATION */
+
+.contact-eyebrow,
+.contact-heading,
+.contact-description,
+.contact-buttons,
+.contact-email,
+.contact-telegram-link,
+.contact-bottom {
+  opacity: 0;
+  animation: contactReveal 0.8s ease forwards;
+}
+
+.contact-heading {
+  animation-delay: 0.15s;
+}
+
+.contact-description {
+  animation-delay: 0.3s;
+}
+
+.contact-buttons {
+  animation-delay: 0.45s;
+}
+
+.contact-email {
+  animation-delay: 0.55s;
+}
+
+.contact-telegram-link {
+  animation-delay: 0.6s;
+}
+
+.contact-bottom {
+  animation-delay: 0.65s;
+}
+
+@keyframes contactReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 85px 6% 30px;
+  }
+
+  .contact-eyebrow {
+    margin-bottom: 35px;
+  }
+
+  .contact-main {
+    padding: 20px 0 75px;
+  }
+
+  .contact-heading h2 {
+    font-size: clamp(45px, 11vw, 65px);
+    letter-spacing: -2.5px;
+  }
+
+  .contact-heading h3 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .contact-description {
+    font-size: 14px;
+  }
+
+  .contact-buttons {
+    gap: 12px;
+  }
+
+  .contact-email-button,
+  .contact-telegram-button {
+    padding: 15px 18px;
+    gap: 20px;
+  }
+
+  .contact-bottom {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .contact-brand {
+    font-size: 18px;
+  }
+
+  .contact-brand p {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .back-to-top {
+    font-size: 9px;
+    gap: 7px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-eyebrow,
+  .contact-heading,
+  .contact-description,
+  .contact-buttons,
+  .contact-email,
+  .contact-telegram-link,
+  .contact-bottom {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

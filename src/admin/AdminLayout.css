@@ -1,0 +1,195 @@
+.admin-layout {
+  min-height: 100vh;
+  background: #0b0b14;
+  color: #ffffff;
+}
+
+.admin-layout-main {
+  min-height: 100vh;
+  margin-left: 260px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.admin-layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-header-label {
+  display: block;
+  margin-bottom: 9px;
+  color: #ff702e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.admin-layout-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.admin-layout-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .admin-layout-main {
+    margin-left: 210px;
+    padding: 25px 18px;
+  }
+
+  .admin-layout-header h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 520px) {
+  .admin-sidebar {
+    width: 65px;
+    min-width: 65px;
+    padding: 20px 7px;
+  }
+
+  .admin-brand {
+    font-size: 0;
+    margin: 0 0 35px;
+    text-align: center;
+  }
+
+  .admin-brand span {
+    font-size: 0;
+  }
+
+  .admin-brand small {
+    display: none;
+  }
+
+  .admin-navigation a {
+    justify-content: center;
+    padding: 13px 5px;
+    font-size: 0;
+  }
+
+  .admin-navigation a:first-letter {
+    font-size: 18px;
+  }
+
+  .admin-logout {
+    font-size: 0;
+  }
+
+  .admin-logout:first-letter {
+    font-size: 18px;
+  }
+
+  .admin-layout-main {
+    margin-left: 65px;
+    padding: 22px 12px;
+  }
+}
+/* =================================
+   MOBILE HAMBURGER MENU
+================================= */
+
+.admin-mobile-menu {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 112, 46, 0.3);
+  border-radius: 9px;
+  background: rgba(255, 112, 46, 0.12);
+  color: #ff8954;
+  font-size: 23px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.admin-sidebar-overlay {
+  display: none;
+}
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 600px) {
+  .admin-mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .admin-layout-header {
+    gap: 15px;
+    justify-content: flex-start;
+  }
+
+  .admin-layout-main {
+    margin-left: 0 !important;
+    padding: 20px 15px;
+  }
+
+  .admin-layout .admin-sidebar {
+    width: 260px !important;
+    min-width: 260px !important;
+    height: 100vh !important;
+    padding: 30px 18px !important;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: none;
+  }
+
+  .admin-layout .admin-sidebar.admin-sidebar-open {
+    transform: translateX(0);
+    box-shadow: 10px 0 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .admin-layout .admin-brand {
+    font-size: 25px !important;
+    margin: 0 0 45px 10px !important;
+    text-align: left;
+  }
+
+  .admin-layout .admin-brand span {
+    font-size: inherit;
+  }
+
+  .admin-layout .admin-brand small {
+    display: block;
+  }
+
+  .admin-layout .admin-navigation {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 9px;
+  }
+
+  .admin-layout .admin-navigation a {
+    justify-content: flex-start;
+    padding: 14px 15px;
+    font-size: 14px;
+  }
+
+  .admin-layout .admin-logout {
+    margin-top: auto;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .admin-sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999;
+  }
+}

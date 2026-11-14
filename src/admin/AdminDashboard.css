@@ -1,0 +1,731 @@
+.admin-dashboard {
+  min-height: 100vh;
+  display: flex;
+  background: #080f1e;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+/* SIDEBAR */
+
+.admin-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  padding: 35px 22px;
+  box-sizing: border-box;
+  background: #101a2b;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.admin-brand {
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 55px;
+}
+
+.admin-brand span {
+  color: #ff702e;
+}
+
+.admin-brand small {
+  display: block;
+  color: #718096;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 9px;
+}
+
+.admin-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.admin-navigation a {
+  padding: 15px;
+  border-radius: 8px;
+  color: #9ca9bd;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.admin-navigation a:hover,
+.admin-navigation a.admin-nav-active {
+  background: rgba(255, 112, 46, 0.12);
+  color: #ff8954;
+}
+
+.admin-logout {
+  margin-top: auto;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid #344158;
+  border-radius: 8px;
+  color: #ff8954;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* MAIN CONTENT */
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+  padding: 40px;
+  max-width: 1500px;
+}
+
+.admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.admin-topbar p,
+.admin-section-heading p {
+  color: #ff702e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.admin-topbar h1 {
+  font-size: 32px;
+  margin: 8px 0 0;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-avatar {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: #ff702e;
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.admin-profile strong,
+.admin-profile small {
+  display: block;
+}
+
+.admin-profile strong {
+  font-size: 13px;
+}
+
+.admin-profile small {
+  color: #8997ad;
+  font-size: 11px;
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+}
+
+/* WELCOME */
+
+.admin-welcome {
+  padding: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  background: radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 112, 46, 0.15),
+      transparent 35%
+    ),
+    #121e32;
+  margin-bottom: 28px;
+}
+
+.admin-welcome p {
+  color: #ff702e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.admin-welcome h2 {
+  font-size: clamp(23px, 3vw, 35px);
+  margin: 15px 0;
+  letter-spacing: -1px;
+}
+
+.admin-welcome span {
+  color: #9ca9bd;
+  font-size: 13px;
+}
+
+/* STATISTICS */
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.admin-stat-card {
+  padding: 25px;
+  background: #121e32;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+}
+
+.admin-stat-card span {
+  color: #9ca9bd;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.admin-stat-card h2 {
+  color: #ff702e;
+  font-size: 38px;
+  margin: 18px 0 8px;
+}
+
+.admin-stat-card p {
+  color: #8795aa;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* PROJECT MANAGEMENT */
+
+.admin-project-section {
+  padding: 28px;
+  background: #121e32;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+}
+
+.admin-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.admin-section-heading p {
+  margin-bottom: 8px;
+}
+
+.admin-section-heading h2 {
+  font-size: 23px;
+  margin: 0;
+}
+
+.admin-section-heading > span {
+  color: #ff8954;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.admin-project-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-project-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.admin-project-number {
+  color: #ff702e;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.admin-project-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-project-details strong,
+.admin-project-details small {
+  display: block;
+}
+
+.admin-project-details strong {
+  font-size: 13px;
+}
+
+.admin-project-details small {
+  color: #8795aa;
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+.admin-project-type {
+  color: #9ca9bd;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.admin-published {
+  padding: 7px 10px;
+  border-radius: 5px;
+  background: rgba(45, 190, 120, 0.12);
+  color: #4bd49a;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.admin-loading {
+  color: #9ca9bd;
+}
+
+.admin-dashboard-footer {
+  padding: 30px 0;
+  color: #ff702e;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.admin-dashboard-footer span {
+  color: #718096;
+  font-size: 9px;
+  margin-left: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    width: 200px;
+    padding: 28px 15px;
+  }
+
+  .admin-main {
+    padding: 25px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .admin-brand {
+    margin-bottom: 20px;
+  }
+
+  .admin-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-logout {
+    margin-top: 18px;
+  }
+
+  .admin-main {
+    padding: 20px 15px;
+  }
+
+  .admin-topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-welcome {
+    padding: 25px;
+  }
+
+  .admin-project-section {
+    padding: 18px;
+  }
+
+  .admin-project-row {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .admin-project-details {
+    flex-basis: 60%;
+  }
+}
+
+/* =================================
+   PROJECT MANAGEMENT BUTTONS
+================================= */
+
+.admin-add-button {
+  background: #ff702e;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.admin-add-button:hover {
+  background: #ff8a50;
+  transform: translateY(-2px);
+}
+
+.admin-project-summary {
+  color: #9ba9bd;
+  font-size: 13px;
+  margin: 15px 0;
+}
+
+/* =================================
+   PROJECT FORM
+================================= */
+
+.admin-project-form {
+  background: #121d31;
+  border: 1px solid #263650;
+  border-radius: 14px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.admin-project-form h3 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+
+.admin-project-form label {
+  display: block;
+  color: #cbd5e1;
+  font-size: 13px;
+  margin: 16px 0 8px;
+}
+
+.admin-project-form input:not([type='checkbox']),
+.admin-project-form select {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0b1425;
+  border: 1px solid #30415b;
+  color: #fff;
+  padding: 13px;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+}
+
+.admin-project-form input:focus,
+.admin-project-form select:focus {
+  border-color: #ff702e;
+}
+
+.admin-publish-checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-publish-checkbox input {
+  accent-color: #ff702e;
+  width: 17px;
+  height: 17px;
+}
+
+.admin-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.admin-form-actions button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 700;
+  background: #ff702e;
+  color: white;
+}
+
+.admin-form-actions button:last-child {
+  background: #29384f;
+}
+
+.admin-form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =================================
+   PROJECT ACTIONS
+================================= */
+
+.admin-project-actions {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.admin-project-actions button {
+  background: #263650;
+  color: #fff;
+  border: none;
+  padding: 8px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.admin-project-actions button:hover {
+  background: #3b506e;
+}
+
+.admin-project-actions .admin-delete-button {
+  background: #692d35;
+}
+
+.admin-project-actions .admin-delete-button:hover {
+  background: #a83240;
+}
+
+.admin-unpublished {
+  color: #ffb36d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =================================
+   SUCCESS AND ERROR MESSAGES
+================================= */
+
+.admin-success-message {
+  background: #123b30;
+  color: #75e0b3;
+  padding: 12px 15px;
+  border-radius: 7px;
+  margin: 15px 0;
+}
+
+.admin-error-message {
+  background: #49242b;
+  color: #ff9ba5;
+  padding: 12px 15px;
+  border-radius: 7px;
+  margin: 15px 0;
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 700px) {
+  .admin-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .admin-project-row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .admin-project-actions {
+    width: 100%;
+  }
+
+  .admin-project-form {
+    padding: 18px;
+  }
+
+  .admin-form-actions {
+    flex-wrap: wrap;
+  }
+}
+
+/* ADMIN PROJECT THUMBNAILS */
+
+.admin-project-thumbnail {
+  width: 110px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #1c2940;
+  flex-shrink: 0;
+  border: 1px solid #30415b;
+}
+
+.admin-project-row {
+  align-items: center;
+}
+
+.admin-project-details {
+  flex: 1;
+  min-width: 120px;
+}
+
+@media (max-width: 700px) {
+  .admin-project-thumbnail {
+    width: 90px;
+    height: 55px;
+  }
+}
+
+/* =================================
+   NEW SHARED ADMIN LAYOUT FIXES
+================================= */
+
+.admin-layout .admin-stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+}
+
+.admin-layout .admin-stat-card {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.admin-layout .admin-project-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-layout .admin-project-row {
+  min-width: 0;
+}
+
+.admin-layout .admin-project-details {
+  overflow-wrap: anywhere;
+}
+
+.admin-layout .admin-project-actions button {
+  white-space: nowrap;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .admin-layout .admin-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-layout .admin-project-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .admin-layout .admin-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .admin-layout .admin-stat-card {
+    padding: 18px;
+  }
+
+  .admin-layout .admin-stat-card h2 {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+
+  .admin-layout .admin-project-section {
+    padding: 16px;
+  }
+
+  .admin-layout .admin-section-heading {
+    align-items: stretch;
+  }
+
+  .admin-layout .admin-add-button {
+    width: 100%;
+  }
+
+  /* MOBILE PROJECT BADGE FIX */
+
+  .admin-project-row {
+    display: grid !important;
+    grid-template-columns: 28px 75px minmax(0, 1fr);
+    gap: 10px;
+    padding: 16px 0;
+  }
+
+  .admin-project-thumbnail {
+    width: 75px;
+    height: 55px;
+  }
+
+  .admin-project-details {
+    min-width: 0;
+  }
+
+  .admin-project-type,
+  .admin-featured-badge,
+  .admin-published,
+  .admin-unpublished {
+    grid-column: 2 / -1;
+    position: static !important;
+    display: inline-flex;
+    width: fit-content;
+    margin: 0;
+    justify-self: start;
+  }
+
+  .admin-project-actions {
+    grid-column: 2 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .admin-layout .admin-project-actions button {
+    flex: 1;
+    padding: 10px 7px;
+    font-size: 11px;
+  }
+
+  .admin-layout .admin-project-form {
+    padding: 15px;
+  }
+
+  .admin-layout .admin-form-actions button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 380px) {
+  .admin-layout .admin-project-row {
+    grid-template-columns: 24px 60px minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .admin-layout .admin-project-thumbnail {
+    width: 60px;
+    height: 48px;
+  }
+}

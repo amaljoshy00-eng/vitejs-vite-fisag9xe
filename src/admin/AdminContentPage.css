@@ -1,0 +1,40 @@
+.admin-content-intro {
+  margin-bottom: 28px;
+  padding: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 112, 46, 0.09),
+    rgba(120, 75, 255, 0.07)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+}
+
+.admin-content-intro h2 {
+  margin: 0 0 9px;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.admin-content-intro p {
+  margin: 0;
+  color: #a5a5b8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .admin-content-intro {
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+
+  .admin-content-intro h2 {
+    font-size: 18px;
+  }
+
+  .admin-content-intro p {
+    font-size: 13px;
+  }
+}

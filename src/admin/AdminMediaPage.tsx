@@ -48,24 +48,26 @@ function AdminMediaPage() {
         return;
       }
 
-      (data || [])
-        .filter((file) => file.id && file.name)
-        .forEach((file) => {
-          const path = folder ? `${folder}/${file.name}` : file.name;
+      for (const file of data || []) {
+        if (!file.id || !file.name || !file.created_at) {
+          continue;
+        }
 
-          const { data: publicData } = supabase.storage
-            .from('portfolio-media')
-            .getPublicUrl(path);
+        const path = folder ? `${folder}/${file.name}` : file.name;
 
-          allFiles.push({
-            name: file.name,
-            id: file.id,
-            created_at: file.created_at,
-            url: publicData.publicUrl,
-            category,
-            path,
-          });
+        const { data: publicData } = supabase.storage
+          .from('portfolio-media')
+          .getPublicUrl(path);
+
+        allFiles.push({
+          name: file.name,
+          id: file.id,
+          created_at: file.created_at,
+          url: publicData.publicUrl,
+          category,
+          path,
         });
+      }
     }
 
     setFiles(
